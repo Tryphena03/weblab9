@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<script
+src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<script>
+var app = angular.module('myapp', ['ngRoute']);
+app.config(function($routeProvider){
+$routeProvider
+.when('/login',{
+templateUrl: 'login.html'
+})
+.when('/register',{
+templateUrl: 'register.html'
+})
+.when('/sample',{
+templateUrl: 'sample.html'
+})
+.when('/Exp3',{
+templateUrl: 'Exp3.html'
+})
+});
+</script>
+</head>
+<body ng-app="myapp">
+<h1>Angular JS Routing</h1>
+<hr>
+<div class="sidebar">
+<a href="#!login">Login</a>
+<a href="#!register">Register</a>
+<a href="#!sample">sample</a>
+<a href="#!Exp3">Exp3</a>
+</div>
+<div class="content" ng-view></div>
+</body>
+</html>
